@@ -2,12 +2,14 @@ package Org.TheCodeGuy.Messenger;
 
 public class Message {
     private  String text;
-    private String recipient;
+    private String recipientName;
+    private String recipientNumber;
     private int id;
 
-    public Message(String text, String recipient, int id) {
+    public Message(String text,String recipientName, String recipientNumber, int id) {
         this.text = text;
-        this.recipient = recipient;
+        this.recipientName = recipientName;
+        this.recipientNumber = recipientNumber;
         this.id = id;
     }
 
@@ -19,12 +21,20 @@ public class Message {
         this.text = text;
     }
 
-    public String getRecipient() {
-        return recipient;
+    public String getRecipientName() {
+        return recipientName;
     }
 
-    public void setRecipient(String recipient) {
-        this.recipient = recipient;
+    public void setRecipientName(String recipientName) {
+        this.recipientName = recipientName;
+    }
+
+    public String getRecipientNumber() {
+        return recipientNumber;
+    }
+
+    public void setRecipientNumber(String recipientNumber) {
+        this.recipientNumber = recipientNumber;
     }
 
     public int getId() {
@@ -35,6 +45,6 @@ public class Message {
         this.id = id;
     }
     public void GetDetails(){
-        System.out.println("Contact Name : " + recipient+"\nMessage : "+text+"\nMessage ID : "+id);
+        System.out.println("Contact Name : " + recipientName+"\nMessage : "+text+"\nMessage ID : "+id);
     }
 }
