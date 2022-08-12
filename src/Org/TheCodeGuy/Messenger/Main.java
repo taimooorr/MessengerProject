@@ -121,9 +121,24 @@ public class Main {
             addContact();
         }
         else{
-            Contact contact = new Contact(name, number, email);
-            contacts.add(contact);
-            System.out.println("Contact Added Successfully");
+            boolean doesExist = false;
+            for(Contact contact : contacts){
+                if(contact.getName().equals(number)){
+                    doesExist = true;
+                }
+            }
+            if(!doesExist){
+                Contact contact = new Contact(name, number, email);
+                contacts.add(contact);
+                System.out.println("Contact Added Successfully");
+                System.out.println("Contact Name : " + name+
+                        "\nContact Number : "+number+
+                        "\nContact Email : "+email);
+            }
+            else{
+                System.out.println("Contact Already Exists");
+                addContact();
+            }
 
         }
         manageContact();
