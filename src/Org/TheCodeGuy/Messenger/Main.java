@@ -74,10 +74,7 @@ public class Main {
                         if(contact.getNumber().equals(number)){
                            ArrayList<Message>  newMessages = contact.getMessages();
                            newMessages.add(newMessage);
-                           Contact currentContact = contact;
-                           currentContact.setMessages(newMessages);
-                           contacts.remove(contact);
-                            contacts.add(currentContact);
+                            contact.setMessages(newMessages);
 
 
                         }
@@ -87,6 +84,7 @@ public class Main {
             }
             else{
             System.out.println("There is no such contact");
+                Messager();
             }
 
         }
@@ -106,6 +104,7 @@ public class Main {
             }
         } else {
             System.out.println("No Messages Found");
+
         }
     }
 
