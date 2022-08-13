@@ -56,7 +56,7 @@ public class Contact {
 public void GetDetails(){
         System.out.println("Contact Name : " + name+
                 "\nContact Number : "+number+
-                "\nContact Email : "+email);
+                "\nContact Email  : "+email);
     }
 
 }
